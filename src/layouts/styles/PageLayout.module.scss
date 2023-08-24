@@ -1,0 +1,72 @@
+@import "../../scss/scss-utils/color";
+@import "../../scss/scss-utils/mixins";
+
+.page_layout_wrapper {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	@include flex-row-space-between;
+}
+.page_content_wrapper {
+	width: 100%;
+	position: relative;
+	@include flex-col-center;
+	overflow-y: scroll;
+	.main_layout_wrapper {
+		width: 95%;
+		margin: 2rem 0 4rem 0;
+		@include flex-col-center;
+		@include screens-3xl {
+			width: 80%;
+		}
+	}
+}
+.sidebar_wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15rem;
+	height: 100vh;
+	padding: 2rem 0;
+	overflow-y: scroll;
+	z-index: 50;
+
+	@include screens-xl {
+		width: 20rem;
+	}
+	@include screens-xl {
+		position: unset;
+		width: 22rem;
+		transform: unset;
+	}
+}
+
+.backdrop {
+	z-index: 50;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.582);
+		backdrop-filter: blur(2px);
+		@include screens-xl {
+			display: none;
+		}
+	}
+	@include screens-xl {
+		z-index: unset;
+	}
+}
+.page_loading_animation {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+.navy_background {
+	background-color: $navy_main;
+}

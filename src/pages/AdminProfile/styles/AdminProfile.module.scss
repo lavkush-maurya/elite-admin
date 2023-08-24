@@ -1,0 +1,43 @@
+@import "../../../scss/scss-utils/color";
+@import "../../../scss/scss-utils/mixins";
+.profile_wrapper {
+	min-height: 78vh;
+	width: 100%;
+	margin-top: 0;
+	@include screens-md {
+		margin-top: 2rem;
+	}
+	.profile_details {
+		padding: 2rem 1.8rem;
+		border-radius: 8px;
+		@include box-shadow-sm;
+		img {
+			width: 9rem;
+			height: 9rem;
+			border-radius: 50%;
+			@include screens-md {
+				width: 13em;
+				height: 13em;
+			}
+		}
+		ul {
+			margin-top: 2rem;
+			@include flex-col;
+			gap: 1rem;
+			li {
+				text-transform: capitalize;
+				border-radius: 8px;
+				padding: 1rem;
+				font-family: "Roboto", sans-serif;
+				@include flex-row-center;
+				gap: 1rem;
+				@include screens-md {
+					gap: 2rem;
+				}
+				p {
+					min-width: 6rem;
+				}
+			}
+		}
+	}
+}

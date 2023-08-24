@@ -1,0 +1,34 @@
+@import "../../../../scss/scss-utils/color";
+@import "../../../../scss/scss-utils/mixins";
+
+.widget_card_wrapper {
+	position: relative;
+	@include box-shadow-sm;
+	width: 100%;
+	height: 100%;
+	padding: 1.5rem;
+	border-radius: 8px;
+	@include flex-row-space-between;
+	align-items: center;
+	gap: 2rem;
+	.widget_contents {
+		@include flex-col;
+		gap: 1rem;
+		z-index: 1;
+		width: 60%;
+	}
+	.widget_img {
+		position: absolute;
+		width: 12rem;
+		height: 12rem;
+		right: 2%;
+		img {
+			width: 100%;
+			height: 100%;
+			opacity: 0.8;
+		}
+	}
+	p {
+		margin: 0.3rem 0;
+	}
+}

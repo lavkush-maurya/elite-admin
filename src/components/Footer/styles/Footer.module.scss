@@ -1,0 +1,19 @@
+@import "../../../scss/scss-utils/color";
+@import "../../../scss/scss-utils/mixins";
+footer {
+	width: 100%;
+	@include flex-row-center;
+	justify-content: center;
+	.footer_content_wrapper {
+		padding: 1rem 0;
+		.footer_icons_wrapper {
+			@include flex-row-center;
+			justify-content: center;
+			gap: 1rem;
+			margin-top: 0.8rem;
+		}
+		p {
+			color: $body_text;
+		}
+	}
+}

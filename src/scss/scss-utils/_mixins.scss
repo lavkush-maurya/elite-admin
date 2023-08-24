@@ -1,0 +1,96 @@
+@import "./color";
+/* Breakpoints mobile first approach */
+$bp-xs: 412px;
+$bp-sm: 575px;
+$bp-md: 768px;
+$bp-lg: 1020px;
+$bp-xl: 1280px;
+$bp-2xl: 1536px;
+$bp-3xl: 1620px;
+
+/* Mixins for media query */
+@mixin screens-xs {
+	@media (min-width: $bp-xs) {
+		@content;
+	}
+}
+@mixin screens-sm {
+	@media (min-width: $bp-sm) {
+		@content;
+	}
+}
+@mixin screens-md {
+	@media (min-width: $bp-md) {
+		@content;
+	}
+}
+@mixin screens-lg {
+	@media (min-width: $bp-lg) {
+		@content;
+	}
+}
+@mixin screens-xl {
+	@media (min-width: $bp-xl) {
+		@content;
+	}
+}
+@mixin screens-2xl {
+	@media (min-width: $bp-2xl) {
+		@content;
+	}
+}
+@mixin screens-3xl {
+	@media (min-width: $bp-3xl) {
+		@content;
+	}
+}
+/*------------------------------*/
+
+/*  Flex Mixin  */
+@mixin flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+}
+@mixin flex-col-space-between {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+@mixin flex-row-space-between {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+@mixin flex-row-center {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+@mixin flex-col-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*--------------BOX-SHADOW----------------*/
+
+@mixin box-shadow-defusive {
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+@mixin box-shadow-sm {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+@mixin box-shadow-md {
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+@mixin box-shadow-lg {
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+@mixin box-shadow-blue {
+	box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}

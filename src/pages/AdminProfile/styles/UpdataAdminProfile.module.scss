@@ -1,0 +1,59 @@
+@import "../../../scss/scss-utils/color";
+@import "../../../scss/scss-utils/mixins";
+
+.update_profile_main {
+	width: 100%;
+	min-height: 78vh;
+	margin-top: 0;
+	margin-bottom: 2rem;
+	@include screens-md {
+		margin-top: 2rem;
+	}
+	.update_profile_form {
+		position: relative;
+		width: 100%;
+		padding: 2.5rem 0.8rem;
+		border-radius: 8px;
+		@include box-shadow-sm;
+		@include screens-md {
+			padding: 2.5rem 1.8rem;
+		}
+		.loading_line {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0rem;
+		}
+		.uploaded_image {
+			margin-top: -1rem;
+			position: relative;
+			img {
+				width: 6rem;
+				height: 6rem;
+				border-radius: 50%;
+			}
+			button {
+				position: absolute;
+				top: 0;
+				right: -0.8rem;
+			}
+		}
+		form {
+			@include flex-col-center;
+			gap: 2.2rem;
+
+			.input {
+				width: 100%;
+				@include flex-row-center;
+				gap: 1.5rem;
+			}
+		}
+		.form_link {
+			text-align: center;
+			margin-top: 1.2rem;
+		}
+	}
+}
+.opacity {
+	opacity: 0.5;
+}

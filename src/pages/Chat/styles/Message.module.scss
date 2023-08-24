@@ -1,0 +1,49 @@
+@import '../../../scss/scss-utils/color';
+@import '../../../scss/scss-utils/mixins';
+
+.message_align_left {
+	@include flex-col;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.message_align_right {
+	@include flex-col;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.time_right,
+.time_left {
+	font-size: 0.7rem;
+	color: #b6b5b5;
+	width: 80%;
+	display: block;
+	margin-top: 0.4rem;
+}
+.time_right {
+	text-align: end;
+}
+.time_left {
+	text-align: start;
+}
+
+.message_blue_bg,
+.message_gray_bg {
+	padding: 0.6rem 1rem;
+	max-width: 80%;
+	p {
+		font-weight: 200;
+		line-height: 1.6;
+		font-size: 0.9rem;
+	}
+}
+.message_blue_bg {
+	background-color: #6b19ff;
+	border-radius: 1rem 1rem 0 1rem;
+}
+
+.message_gray_bg {
+	background-color: $body;
+	border-radius: 1rem 1rem 1rem 0;
+}

@@ -1,0 +1,5 @@
+@import "../../../../scss/scss-utils/mixins";
+.page_title_wrapper {
+	margin-bottom: 2rem;
+	@include flex-row-space-between;
+}

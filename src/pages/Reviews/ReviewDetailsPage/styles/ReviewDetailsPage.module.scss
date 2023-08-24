@@ -1,0 +1,10 @@
+@import "../../../../scss/scss-utils/mixins";
+
+.review_details_wrapper {
+	min-height: 72vh;
+	width: 100%;
+	.loading_skeleton {
+		@include flex-col;
+		gap: 1.6rem;
+	}
+}

@@ -1,0 +1,8 @@
+@import "../../../scss/scss-utils/color";
+@import "../../../scss/scss-utils/mixins";
+
+.options_wrapper {
+	@include screens-lg {
+		width: 30%;
+	}
+}

@@ -1,0 +1,33 @@
+@import "../../../../scss/scss-utils/color";
+@import "../../../../scss/scss-utils/mixins";
+
+.widget_card_sm_wrapper {
+	height: 9rem;
+	border-radius: 8px;
+	@include box-shadow-sm;
+	padding: 1.5rem;
+	@include flex-row-space-between;
+	align-items: center;
+	gap: 0.5rem;
+	.data_wrapper {
+		width: 80%;
+		@include flex-col-space-between;
+		gap: 1rem;
+		.percentage_number {
+			@include flex-col;
+			gap: 0.2rem;
+		}
+		span {
+			margin-left: -0.3rem;
+		}
+	}
+	.process_bar_wrapper {
+		@include flex-col-center;
+		justify-content: center;
+		width: 5rem;
+		height: 5rem;
+	}
+}
+.loading_skeleton {
+	width: 100%;
+}

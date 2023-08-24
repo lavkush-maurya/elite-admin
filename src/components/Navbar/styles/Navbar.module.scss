@@ -1,0 +1,156 @@
+@import '../../../scss/scss-utils/color';
+@import '../../../scss/scss-utils/mixins';
+
+.navbar {
+	@include flex-row-space-between;
+	align-items: center;
+	padding: 1.1rem 1rem;
+	// background-color: $white;
+	width: 100%;
+	@include box-shadow-sm;
+	@include screens-sm {
+		padding: 1.1rem 2rem;
+	}
+	.menue_btn {
+		@include screens-xl {
+			display: none;
+		}
+	}
+	.website_link {
+		display: none;
+		@include screens-md {
+			@include flex-row-center;
+			gap: 0.5rem;
+			padding: 0.5rem 0.7rem;
+			border-radius: 4px;
+		}
+	}
+	.nav_buttons_wrapper {
+		button {
+			padding: 0;
+		}
+		@include flex-row-center;
+		gap: 1rem;
+		.avater_wrapper {
+			position: relative;
+		}
+		.dropdown_wrapper {
+			@include flex-col;
+			backdrop-filter: blur(5px);
+			position: absolute;
+			right: 2%;
+			top: 3.4rem;
+			width: 12rem;
+			@include box-shadow-lg;
+			padding: 1.5rem;
+			border-radius: 4px;
+			gap: 0.8rem;
+			z-index: 20;
+			button {
+				padding: 0;
+				font-size: 0.9rem;
+				font-weight: 500;
+				&:hover {
+					color: $blue;
+				}
+			}
+			.admin_details {
+				border-bottom: 1px dashed $off_white;
+				padding: 0.5rem 0.8rem;
+			}
+			ul {
+				@include flex-col;
+				gap: 0.8rem;
+				li {
+					font-size: 0.9rem;
+					letter-spacing: 0.5px;
+					font-weight: 500;
+					padding: 0.4rem 0.8rem;
+					p {
+						transition: all 0.2s linear;
+					}
+					&:hover {
+						p {
+							color: $blue;
+							transition: all 0.2s linear;
+							transform: translateX(2px);
+						}
+					}
+				}
+			}
+		}
+		.notification_wrapper {
+			position: relative;
+			z-index: 20;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 0.5rem;
+				height: 0.5rem;
+				background-color: $red_main;
+				right: 0.1rem;
+				top: -0.1rem;
+				border-radius: 1rem;
+			}
+			.notification_dropdown_wrapper {
+				@include box-shadow-lg;
+				backdrop-filter: blur(5px);
+				position: absolute;
+				right: -5rem;
+				top: 3rem;
+				width: 16rem;
+				padding-bottom: 1.2rem;
+				border-radius: 4px;
+				@include screens-sm {
+					right: 0;
+				}
+				h6 {
+					border-bottom: 2px solid $navy_3;
+					padding: 0.6rem 1rem;
+				}
+				.notifications {
+					@include flex-row-center;
+					transition: all 0.2s ease-in-out;
+					cursor: pointer;
+					&:not(:last-child) {
+						border-bottom: 1px solid $navy_3;
+					}
+					padding: 1rem;
+					gap: 0.5rem;
+					&_title {
+						p {
+							font-size: 0.8rem;
+							font-weight: 500;
+							&:last-child {
+								font-size: 0.7rem;
+								font-weight: 400;
+							}
+						}
+					}
+					&:hover {
+						@include box-shadow-sm;
+						transition: all 0.2s ease-in-out;
+					}
+				}
+			}
+		}
+	}
+}
+
+.chat_link {
+	position: relative;
+	button {
+		padding: 0;
+		.message_count {
+			padding: 0.2rem 0.28rem;
+			border-radius: 50%;
+			background-color: $red_main;
+			line-height: 0.8;
+			font-size: 0.7rem;
+			color: $white;
+			position: absolute;
+			top: -0.2rem;
+			right: -0.4rem;
+		}
+	}
+}

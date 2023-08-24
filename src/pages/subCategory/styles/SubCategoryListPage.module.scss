@@ -1,0 +1,11 @@
+@import "../../../scss/scss-utils/color";
+@import "../../../scss/scss-utils/mixins";
+
+.sub_category_page_wrapper {
+	width: 100%;
+	min-height: 75vh;
+	margin-top: 2rem;
+	.sub_category_data_grid_wrapper {
+		width: 100%;
+	}
+}

@@ -1,0 +1,39 @@
+@import '../../scss/scss-utils/mixins';
+
+.chat_page_wrapper {
+	width: 100%;
+	@include screens-md {
+		height: 85vh;
+	}
+	.messages_container_main {
+		@include flex-col;
+		height: 100%;
+		gap: 2rem;
+		@include screens-md {
+			@include flex-row-space-between;
+		}
+		.conversation_list {
+			@include flex-row;
+			gap: 1rem;
+			overflow-x: scroll;
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+			@include screens-md {
+				@include flex-col;
+				width: 20rem;
+				height: 92%;
+				overflow-y: scroll;
+			}
+		}
+		.messages_wrapper {
+			max-height: 75vh;
+			width: 100%;
+			@include screens-md {
+				width: 75%;
+			}
+		}
+	}
+}
+.conversation_list::-webkit-scrollbar {
+	display: none;
+}

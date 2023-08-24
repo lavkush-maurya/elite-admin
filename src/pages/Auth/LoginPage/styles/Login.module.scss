@@ -1,0 +1,60 @@
+@import "../../../../scss/scss-utils/color";
+@import "../../../../scss/scss-utils/mixins";
+
+.main_section {
+	@include flex-col-center;
+	width: 100%;
+	.login_form_wrapper {
+		width: 95%;
+		position: relative;
+		overflow: hidden;
+		@include flex-col-center;
+		justify-content: center;
+		@include box-shadow-sm;
+		border-radius: 4px;
+		padding: 2rem;
+		gap: 1rem;
+		@include screens-md {
+			width: 28rem;
+		}
+		.loading {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		.logo_wrapper {
+			width: 14rem;
+			margin: 1rem 0 2rem 0;
+			@include flex-col-center;
+			gap: 1rem;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+		form {
+			width: 100%;
+			@include flex-col;
+			gap: 1.2rem;
+			button {
+				margin-top: 0.5rem;
+			}
+		}
+		.email_input_feild {
+			height: 3.5rem;
+		}
+		.password_input_feild {
+			position: relative;
+			height: 3.5rem;
+			.password_view_icon_wrapper {
+				position: absolute;
+				right: 2%;
+				top: 0.7rem;
+				z-index: 20;
+				cursor: pointer;
+			}
+		}
+	}
+}

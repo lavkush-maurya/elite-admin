@@ -1,0 +1,10 @@
+@import "../../../scss/scss-utils/color";
+@import "../../../scss/scss-utils/mixins";
+
+.earnings_page_content_wrapper {
+	min-height: 78vh;
+	width: 100%;
+	.revenue_table_wrapper {
+		margin-top: 4rem;
+	}
+}

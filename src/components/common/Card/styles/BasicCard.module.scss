@@ -1,0 +1,16 @@
+@import "../../../../scss/scss-utils/color";
+@import "../../../../scss/scss-utils/mixins";
+
+.basic_card_wrapper {
+	@include box-shadow-sm;
+	border-radius: 8px;
+	padding: 0.6rem;
+	width: 100%;
+	height: 100%;
+	.section_title_wrapper {
+		margin: 0.5rem 0 2rem 0;
+	}
+	@include screens-md {
+		padding: 1.8rem;
+	}
+}

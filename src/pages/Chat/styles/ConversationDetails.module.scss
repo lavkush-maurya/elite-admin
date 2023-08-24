@@ -1,0 +1,68 @@
+@import '../../../scss/scss-utils/color';
+@import '../../../scss/scss-utils/mixins';
+
+.conversation_details {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding: 2rem 0.2rem 4rem 0.2rem;
+	border-radius: 8px;
+	box-shadow: rgba(213, 213, 214, 0.1) 0px 8px 24px;
+	.message_sender_details {
+		padding: 0 2rem;
+		@include flex-row-center;
+		gap: 0.5rem;
+		margin-bottom: 2.5rem;
+		img {
+			width: 4rem;
+			height: 4rem;
+			object-fit: cover;
+			border-radius: 50%;
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+		}
+		.sender_info {
+			@include flex-col;
+			gap: 0.3rem;
+		}
+	}
+	.message_list {
+		padding: 0 2rem;
+		@include flex-col;
+		flex-direction: column-reverse;
+		gap: 1rem;
+		margin-bottom: 3rem;
+		overflow-y: auto;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		height: 35vh;
+		@include screens-md {
+			height: 50vh;
+		}
+	}
+}
+
+.message_list::-webkit-scrollbar {
+	display: none;
+}
+
+.not_found_message {
+	text-align: center;
+	position: absolute;
+	top: 3rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.input_error_styles {
+	border: 1px solid #cc2121 !important;
+	&::placeholder {
+		color: #cc2121;
+	}
+}
+.error_message_wrapper {
+	position: absolute;
+	bottom: -1.2rem;
+	left: 1.5rem;
+	p {
+		font-size: 0.7rem;
+	}
+}

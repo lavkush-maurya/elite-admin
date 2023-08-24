@@ -1,0 +1,23 @@
+@import '../../scss/scss-utils/color';
+@import '../../scss/scss-utils/mixins';
+.header_section {
+	@include flex-row-center;
+	justify-content: center;
+	width: 100%;
+	height: 4rem;
+	position: relative;
+}
+.main_layout_wrapper {
+	min-height: 83vh;
+	@include flex-col-center;
+	justify-content: center;
+}
+.login_info {
+	position: absolute;
+	left: 50%;
+	top: 15%;
+	transform: translate(-50%, -15%);
+	@include flex-col-center;
+	gap: 0.5rem;
+	width: 100%;
+}

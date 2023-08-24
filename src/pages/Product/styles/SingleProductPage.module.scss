@@ -1,0 +1,113 @@
+@import "../../../scss//scss-utils/color";
+@import "../../../scss//scss-utils/mixins";
+
+.single_page_wrapper {
+	position: relative;
+	min-height: 60vh;
+	width: 100%;
+	margin: 4rem 0 4rem 0;
+	padding: 3.5rem 1.5rem;
+	border-radius: 8px;
+	@include box-shadow-sm;
+	@include flex-col-center;
+	gap: 2rem;
+	@include screens-lg {
+		@include flex-row-space-between;
+		gap: 4;
+	}
+	.edit_link_btn {
+		position: absolute;
+		top: -1.5rem;
+		left: 50%;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		@include flex-col-center;
+		justify-content: center;
+		transition: all 0.2s linear;
+		&:hover {
+			@include box-shadow-sm;
+			transition: all 0.2s linear;
+		}
+	}
+	.product_img {
+		min-width: 22rem;
+		height: 25rem;
+		border: 1px solid $body;
+		border-radius: 8px;
+		@include screens-md {
+			width: 22rem;
+			height: 38rem;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 8px;
+			object-fit: cover;
+		}
+		.loading_img_skeleton {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.product_details {
+		width: 100%;
+		@include flex-col;
+		gap: 2.2rem;
+		padding: 0 1rem;
+		@include screens-lg {
+			max-width: 65%;
+		}
+		.date_with_id {
+			border-bottom: 1px solid $light_gray;
+			padding-bottom: 0.5rem;
+			@include flex-col;
+			gap: 1rem;
+			@include screens-md {
+				@include flex-row-space-between;
+				gap: 0;
+			}
+		}
+		.category_sub_category {
+			@include flex-col;
+			text-transform: uppercase;
+			gap: 1rem;
+			@include screens-md {
+				@include flex-row-center;
+			}
+			p {
+				width: 100%;
+				@include flex-row-space-between;
+				@include screens-sm {
+					flex: unset;
+					width: unset;
+				}
+			}
+			span {
+				@include flex-col-center;
+				background-color: $body;
+				padding: 0.5rem 1.5rem;
+				border-radius: 2.5rem;
+				margin: 0 1rem;
+				min-width: 6rem;
+			}
+		}
+		.product_pricing_details {
+			@include flex-col;
+			gap: 1.8rem;
+			p {
+				@include flex-row-space-between;
+				border-bottom: 1px solid $light_gray;
+				padding-bottom: 0.2rem;
+				font-weight: 700;
+			}
+			span {
+				min-width: 5rem;
+				font-weight: 700;
+			}
+		}
+	}
+}
+.color_red {
+	color: $red_main;
+}

@@ -1,0 +1,12 @@
+@import "../../../scss/scss-utils/color";
+@import "../../../scss/scss-utils/mixins";
+
+.product_list_page_wrapper {
+	min-height: 90vh;
+	width: 100%;
+	margin-top: 2rem;
+	.data_grid_wrapper {
+		width: 100%;
+		height: 80%;
+	}
+}

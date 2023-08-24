@@ -1,0 +1,108 @@
+@import "../../../scss/scss-utils/color";
+@import "../../../scss/scss-utils/mixins";
+
+.order_details_page_wrapper {
+	width: 100%;
+	margin-top: 2rem;
+	min-height: 75vh;
+	.page_title {
+		margin-bottom: 2rem;
+	}
+	.product_details_wrapper {
+		position: relative;
+		width: 100%;
+		padding: 2rem;
+		border-radius: 8px;
+		@include box-shadow-sm;
+		@include flex-col;
+		gap: 2.7rem;
+		.loading_state {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		.id_date {
+			@include flex-col;
+			gap: 1rem;
+			@include screens-sm {
+				@include flex-row-space-between;
+			}
+		}
+		.product_row_wrapper {
+			width: 100%;
+			@include flex-col;
+			gap: 1.8rem;
+			.product_row {
+				@include flex-row;
+				gap: 2rem;
+				align-items: center;
+				border: 1px solid $off_white;
+				padding: 0.5rem 1rem;
+				border-radius: 6px;
+				// @include screens-sm {
+				// 	@include flex-row-space-between;
+				// }
+				img {
+					width: 6rem;
+					height: 6rem;
+					border-radius: 6px;
+					border: 1px solid $body;
+				}
+				.product_description {
+					@include flex-col;
+					width: 100%;
+					gap: 1rem;
+					@include screens-md {
+						@include flex-row-space-between;
+					}
+					h2 {
+						min-width: 8rem;
+					}
+				}
+			}
+		}
+	}
+	.shipping_and_amount_wrapper {
+		width: 100%;
+		@include flex-col;
+		margin-top: 2rem;
+		gap: 2rem;
+		@include screens-md {
+			@include flex-row-space-between;
+		}
+		.shipping_wrapper,
+		.amount_wrapper {
+			width: 100%;
+			border-radius: 6px;
+			padding: 2rem;
+			@include box-shadow-sm;
+			@include flex-col;
+			gap: 1rem;
+			.address_details,
+			.amount_summery_top {
+				@include flex-col;
+				gap: 0.8rem;
+				h2 {
+					@include flex-row-space-between;
+					font-weight: 600;
+				}
+				h2:not(:last-child) {
+					border-bottom: 1px solid $body;
+					padding-bottom: 0.4rem;
+				}
+			}
+			.amount_summery_bottom {
+				border-top: 1px solid $off_white;
+				p {
+					@include flex-row-space-between;
+					padding: 0.4rem 0;
+				}
+			}
+		}
+		.border_bottom {
+			border-bottom: 1px solid $off_white;
+			padding-bottom: 0.5rem;
+		}
+	}
+}
