@@ -14,7 +14,7 @@ const AuthPageLayout = ({ children }) => {
             <Typography variant={"subtitle"} color={darkMood ? "paragraph" : "primary"}>Elite Fashion Admin Dashboard</Typography>
          </header>
          <div className={styles.login_info}>
-            <Typography>Email: kobir.h.ritu@gmail.com</Typography>
+            <Typography>Email: demotest@gmail.com</Typography>
             <Typography>Password: 12345678</Typography>
          </div>
          <main className={darkMood ? `${styles.main_layout_wrapper} ${"dark_mood_main"}` : `${styles.main_layout_wrapper} ${"light_mood_main"}`}>
